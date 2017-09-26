@@ -88,3 +88,55 @@ class BankAccount{
                                 deposit(this.interest);  
                                     }
                             }
+
+
+     class CheckingAccount extends BankAccount{
+
+                      constructor(accNumber,accName){
+
+                        super(accNumber, accName);
+
+                        this._transactionCount = 0;
+                        this._numFree = 2;
+                        this._transFee = 5; 
+                   
+                               }
+
+                        deposit(amount){
+                             
+                             if(super.deposit(amount)){
+                            
+                            this._transactionCount++;
+          
+                               return true;
+                               }
+                 
+                                 return false;
+                               }
+                  
+                        withdraw(amount){
+                           
+                               if(super.withdraw(amount)){
+                            
+                              this._transactionCount++;
+                              return true;
+                              }
+                                return false;
+                                }
+        
+                        deductFees(){
+
+                               if(this._transactionCount > this._numFree){
+
+                                 const fees = this._transFee * (this._transactionCount - this._numFree);
+
+                              if(super.withdraw(fees)){
+                                
+                                  this._transactionCount = 0;
+                                              }
+                                   }
+                               }
+
+
+                  }
+                  
