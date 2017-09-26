@@ -68,4 +68,23 @@ class BankAccount{
                                      return true;
                                     }
                           }
-                  }
+              }
+
+
+    class SavingAccount extends BankAccount{
+     
+                     constructor(accNumber, accName, rate){
+
+                            super(accNumber,accName);
+
+                           this.interestRate = rate;
+                           }
+
+             
+                        addInterest(){
+
+                                this.interest = getBalance() * this.interestRate/100;
+                                
+                                deposit(this.interest);  
+                                    }
+                            }
