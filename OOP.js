@@ -41,5 +41,31 @@ class BankAccount{
                   
                   
              
+                       deposit(amount){
+
+                               if(amount > 0){
+
+                                    this._balance += amount;
+                                    
+                                     return true;
+
+                              }else{
+                                     return false;
+                                   }
+                          }
+   
+                       withdraw(amount){
+
+                                if(amount> this._balance){
+
+                                     return false;
+                 
+                               }else{
+ 
                        
+                                    this._balance -= amount;
+                       
+                                     return true;
+                                    }
+                          }
                   }
