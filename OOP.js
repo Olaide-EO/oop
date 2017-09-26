@@ -139,4 +139,25 @@ class BankAccount{
 
 
                   }
-                  
+        
+
+         /*
+   
+      const
+      
+   const user = new CheckingAccount(2006733607, "Tolulope Nathaniel");
+    
+    console.log(user.accountName); // TOLULOPE NATHANIEL
+    
+    user.deposit(234000);         
+    console.log(user.balance);  //234000
+    user.deductFees();
+    console.log(user.balance);  //234000
+    user.withdraw(2066);
+    console.log(user.balance);  //231934
+    user.withdraw(31934);      
+    console.log(user.balance);  //200000
+    user.deductFees();
+    console.log(user.balance);  //199995
+    
+    */
